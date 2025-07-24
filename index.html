@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BalanceBook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>BalanceBook</h1>
+    <form id="transaction-form">
+      <input type="text" id="type" placeholder="Income or Expense" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <button type="submit">Add</button>
+    </form>
+    <div class="filters">
+      <button onclick="filterTransactions('all')">All</button>
+      <button onclick="filterTransactions('income')">Income</button>
+      <button onclick="filterTransactions('expense')">Expense</button>
+    </div>
+    <h2>Balance: $<span id="total">0</span></h2>
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
